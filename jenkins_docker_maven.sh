@@ -15,6 +15,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 sudo apt update
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword > /home/ubuntu/jenkins.txt
 sudo apt install docker-ce -y
+sudo usermod -aG docker ${USER}
 sudo apt install maven -y
 sudo reboot
 
